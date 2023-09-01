@@ -1,0 +1,25 @@
+.weather-data-card {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    gap:50px;
+    padding: 20px;
+    width: 60vw;
+    height: auto;
+}
+.weather-data-card p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.weather-data-card img{
+    width: 4rem;
+    height: 4rem;
+
+}
+@media (max-width: 768px) {
+    .weather-data-card {
+        width: 90vw;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
