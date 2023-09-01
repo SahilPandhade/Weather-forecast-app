@@ -13,13 +13,20 @@
     justify-content: center;
 }
 .weather-data-card img{
-    width: 4rem;
-    height: 4rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: black;
+    margin-left: 8px;
+    border-radius: 50%;
 
 }
 @media (max-width: 768px) {
     .weather-data-card {
-        width: 90vw;
         grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
     }
+    .weather-data-card img{
+        margin-left: 6px ;
+    }
+
 }

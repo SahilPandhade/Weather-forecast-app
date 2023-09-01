@@ -1,46 +1,49 @@
 import { ApiResponse } from "../Types/Types";
 
-// export const DUMMY_DATA: ApiResponse =
-// {
-//     "coord": {
-//         "lon": 85.1235,
-//         "lat": 25.6093
-//     },
-//     "weather": [
-//         {
-//             "id": 721,
-//             "main": "Haze",
-//             "description": "haze",
-//             "icon": "50n"
-//         }
-//     ],
-//     "base": "stations",
-//     "main": {
-//         "temp": 308.12,
-//         "feels_like": 315.12,
-//         "temp_min": 308.12,
-//         "temp_max": 308.12,
-//         "pressure": 1003,
-//         "humidity": 66
-//     },
-//     "visibility": 5000,
-//     "wind": {
-//         "speed": 2.06,
-//         "deg": 270
-//     },
-//     "clouds": {
-//         "all": 40
-//     },
-//     "dt": 1693486211,
-//     "sys": {
-//         "type": 1,
-//         "id": 9129,
-//         "country": "IN",
-//         "sunrise": 1693439966,
-//         "sunset": 1693485666
-//     },
-//     "timezone": 19800,
-//     "id": 1260086,
-//     "name": "Patna",
-//     "cod": 200
-// }
+export const DUMMY_DATA: ApiResponse =
+{
+    "coord": {
+        "lon": 73.8553,
+        "lat": 18.5196
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 302.67,
+        "feels_like": 305.27,
+        "temp_min": 302.67,
+        "temp_max": 302.67,
+        "pressure": 1007,
+        "humidity": 61,
+        "sea_level": 1007,
+        "grnd_level": 946
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.23,
+        "deg": 283,
+        "gust": 3.37
+    },
+    "clouds": {
+        "all": 68
+    },
+    "dt": 1693562773,
+    "sys": {
+        "type": 2,
+        "id": 2083365,
+        "country": "IN",
+        "sunrise": 1693529402,
+        "sunset": 1693574400
+    },
+    "timezone": 19800,
+    "id": 1259229,
+    "name": "Pune",
+    "cod": 200
+}

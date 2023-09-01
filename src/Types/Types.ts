@@ -62,3 +62,6 @@ export interface StrictApiResponse {
 }
 
 export type ApiResponse = Partial<StrictApiResponse>
+export interface CardProps{
+    data:ApiResponse
+}
