@@ -48,10 +48,11 @@ const WeatherApp = () => {
             {cityName && countryCode &&
                 <>
                     <LocationData cityName={cityName} countryCode={countryCode} />
-                    
+                    <Globe cityName={cityName} countryCode={countryCode} />
                 </>
             }
-            <Globe cityName={cityName} countryCode={countryCode} />
+             
+           
         </>
     )
 }

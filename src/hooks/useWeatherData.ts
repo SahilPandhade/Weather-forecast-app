@@ -26,12 +26,6 @@ export const useWeatherData = (cityName: string, countryCode: string, debounceTi
                 }
                 else {
                     setData(weatherData);
-                    // if (weatherData && weatherData.coord && weatherData?.coord.lat) {
-                    //     setGlobeLatitude(Math.min(90, Math.max(-90, parseFloat(weatherData.coord.lat))))
-                    // }
-                    // if (weatherData && weatherData.coord && weatherData?.coord.lon) {
-                    //     setGlobeLongitude(Math.min(90, Math.max(-90, ((parseFloat(weatherData.coord.lon) + 180) % 360) - 180)))
-                    // }
                 }
             } catch (error) {
                 setError('An error occurred while fetching data from the API.');
