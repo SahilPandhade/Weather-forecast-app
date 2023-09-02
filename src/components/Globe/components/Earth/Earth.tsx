@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { OrbitControls, Stars } from '@react-three/drei'
+import {  Stars } from '@react-three/drei'
 import * as THREE from 'three'
 import EarthDayMap from '../../../../assets/8k_earth_daymap.jpg'
 import EarthNormalMap from '../../../../assets/8k_earth_normal_map.jpg'
@@ -12,13 +12,12 @@ interface Props {
     longitude: number;
 }
 const Earth: React.FC<Props> = ({ latitude, longitude }) => {
-    console.log(latitude, longitude)
     const earthRef = useRef<Mesh>(null)
     const cloudsRef = useRef<Mesh>(null)
     const markerRef = useRef<Mesh>(null);
     const [colorMap, normalMap, specularMap, cloudsMap] = useLoader(TextureLoader, [EarthDayMap, EarthNormalMap, EarthSpecularMap, EarthCloudsMap])
 
-    const earthRadius = 1; // Earth's radius
+    const earthRadius = 1;
     const [rotationStopped, setRotationStopped] = useState(false);
     const xRef = useRef(0);
     const yRef = useRef(0);
@@ -37,8 +36,8 @@ const Earth: React.FC<Props> = ({ latitude, longitude }) => {
             const elapsedTime = clock.getElapsedTime();
 
             if (earthRef.current && cloudsRef.current) {
-                earthRef.current.rotation.y = elapsedTime / 6; // Continue rotation
-                cloudsRef.current.rotation.y = elapsedTime / 6; // Continue rotation
+                earthRef.current.rotation.y = elapsedTime / 3; 
+                cloudsRef.current.rotation.y = elapsedTime / 3; 
             }
             if (markerRef.current) {
                 markerRef.current.position.set(xRef.current, yRef.current, zRef.current);

@@ -7,12 +7,9 @@ export const useWeatherData = (cityName: string, countryCode: string, debounceTi
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
     const [rateLimitExceeded, setRateLimitExceeded] = useState(false);
-    const [globeLongitude, setGlobeLongitude] = useState<number>(0)
-    const [globeLatitude,setGlobeLatitude] = useState<number>(0)
     useEffect(() => {
         let timeOut: NodeJS.Timeout | null = null;
         const fetchData = async () => {
-            //const API_URL = process.env.REACT_APP_API_URL!;
             const API_KEY = process.env.REACT_APP_API_KEY!;
             setLoading(true)
             setError(null)
@@ -52,5 +49,5 @@ export const useWeatherData = (cityName: string, countryCode: string, debounceTi
         // }, 2000)
     }, [cityName, countryCode, debounceTime]);
 
-    return { data, loading, error, rateLimitExceeded ,globeLatitude,globeLongitude};
+    return { data, loading, error, rateLimitExceeded };
 };

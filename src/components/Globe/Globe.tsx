@@ -2,7 +2,6 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from "react"
 import Earth from './components/Earth/Earth';
-import { geoOrthographic } from 'd3-geo';
 import { useWeatherData } from '../../hooks/useWeatherData';
 const Globe: React.FC<{ cityName: string; countryCode: string }> = ({ cityName, countryCode }) => {
     const {data} = useWeatherData(cityName,countryCode)

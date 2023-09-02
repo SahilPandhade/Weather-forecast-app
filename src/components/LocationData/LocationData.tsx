@@ -6,6 +6,7 @@ import WeatherInfoCard from '../cards/WeatherInfoCard/WeatherInfoCard';
 import TemperatureCard from '../cards/TemperatureCard/TemperatureCard';
 import PressureCard from '../cards/PressureCard/PressureCard';
 import CityCard from '../cards/CityCard/CityCard';
+import Loader from '../Loader/Loader';
 interface LocationProps {
     cityName: string;
     countryCode: string;
@@ -15,7 +16,8 @@ const LocationData: React.FC<LocationProps> = ({ cityName, countryCode }) => {
     const { data, loading, error,rateLimitExceeded } = useWeatherData(cityName, countryCode);
 
     if (loading) {
-        return <div className='loading'>Loading...</div>;
+        // return <div className='loading'>Loading...</div>;
+        return <Loader/>
     }
 
     if (error) {
