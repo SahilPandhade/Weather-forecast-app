@@ -10,16 +10,10 @@
     gap: 20px;
 }
 
-/* .weather-app-title{
-    font-size: 24px;
-    font-weight: bold;
-} */
 .weather-app-title {
     font-family: 'Permanent Marker', cursive;
-    /* Use the funky font */
     color: black;
-    /* Set the font color to white */
-    font-size: 2rem;
+    font-size: 24px;
     margin: 0;
     animation: fadeIn 1s ease-in;
     background: transparent;
