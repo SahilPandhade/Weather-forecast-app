@@ -23,5 +23,6 @@
   "include": [
     "src",
     ".env"
-  ]
+  ],
+  "types": ["@types/three","@types/d3-geo"]
 }

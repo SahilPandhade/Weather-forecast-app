@@ -7,7 +7,8 @@ export const useWeatherData = (cityName: string, countryCode: string, debounceTi
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
     const [rateLimitExceeded, setRateLimitExceeded] = useState(false);
-
+    const [globeLongitude, setGlobeLongitude] = useState<number>(0)
+    const [globeLatitude,setGlobeLatitude] = useState<number>(0)
     useEffect(() => {
         let timeOut: NodeJS.Timeout | null = null;
         const fetchData = async () => {
@@ -25,6 +26,12 @@ export const useWeatherData = (cityName: string, countryCode: string, debounceTi
                 }
                 else {
                     setData(weatherData);
+                    // if (weatherData && weatherData.coord && weatherData?.coord.lat) {
+                    //     setGlobeLatitude(Math.min(90, Math.max(-90, parseFloat(weatherData.coord.lat))))
+                    // }
+                    // if (weatherData && weatherData.coord && weatherData?.coord.lon) {
+                    //     setGlobeLongitude(Math.min(90, Math.max(-90, ((parseFloat(weatherData.coord.lon) + 180) % 360) - 180)))
+                    // }
                 }
             } catch (error) {
                 setError('An error occurred while fetching data from the API.');
@@ -51,5 +58,5 @@ export const useWeatherData = (cityName: string, countryCode: string, debounceTi
         // }, 2000)
     }, [cityName, countryCode, debounceTime]);
 
-    return { data, loading, error, rateLimitExceeded };
+    return { data, loading, error, rateLimitExceeded ,globeLatitude,globeLongitude};
 };

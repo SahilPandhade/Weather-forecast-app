@@ -45,7 +45,7 @@ interface Sys {
 }
 
 export interface StrictApiResponse {
-    coord: Partial<Coord>;
+    coord: Coord;
     weather: Partial<Weather[]>;
     base: string;
     main: Partial<Main>;

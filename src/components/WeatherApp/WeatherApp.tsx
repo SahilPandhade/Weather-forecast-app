@@ -3,6 +3,7 @@ import './WeatherApp.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import LocationData from '../LocationData/LocationData';
+import Globe from '../Globe/Globe';
 const WeatherApp = () => {
     const [inputValue, setInputValue] = useState('');
     const [cityName, setCityName] = useState<string>('');
@@ -45,8 +46,12 @@ const WeatherApp = () => {
 
             </div>
             {cityName && countryCode &&
-                <LocationData cityName={cityName} countryCode={countryCode}/>
+                <>
+                    <LocationData cityName={cityName} countryCode={countryCode} />
+                    
+                </>
             }
+            <Globe cityName={cityName} countryCode={countryCode} />
         </>
     )
 }
